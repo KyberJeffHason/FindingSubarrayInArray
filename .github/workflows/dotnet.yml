@@ -17,7 +17,7 @@ jobs:
      
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
-      with:
+      env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
        
     - name: Setup NuGet
