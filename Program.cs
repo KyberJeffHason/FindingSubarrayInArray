@@ -15,6 +15,7 @@ namespace FindingSubarrayInArray
             Console.WriteLine(ContainsAtIndex(arr, sub_arr, 2));
 
             Console.WriteLine(FindSubarrayStartIndex(arr, sub_arr));
+            Console.ReadLine();
         }
 
         public static int FindSubarrayStartIndex(int[] array, int[] subarray)
