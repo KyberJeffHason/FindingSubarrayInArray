@@ -17,15 +17,17 @@ jobs:
      
     - name: Setup MSBuild Path
       uses: warrenbuckley/Setup-MSBuild@v1
+      with:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
        
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
      
     - name: Restore NuGet Packages
-      run: nuget restore SimpleFrameworkApp.sln
+      run: nuget restore FindingSubarrayInArray.sln
  
     - name: Build and Publish Web App
-      run: msbuild SimpleFrameworkApp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+      run: msbuild FindingSubarrayInArray.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
  
     - name: Upload Artifact
       uses: actions/upload-artifact@v1.0.0
